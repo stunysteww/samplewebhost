@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+    <!-- =====BOX ICONS===== -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="shortcut icon" type="image/png" href="assets/img/gsc.png">
+    <title>getsetcode</title>
+</head>
+
+<body>
+    <!--===== HEADER =====-->
+    <header class="l-header">
+        <nav class="nav bd-grid">
+            <div>
+                <a href="#" class="nav__logo">.getsetcode</a>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+
+            <div class="nav__menu" id="nav-menu">
+                <div class="nav__close" id="nav-close">
+                    <i class='bx bx-x'></i>
+                </div>
+
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
+                    <li class="nav__item"><a href="me.html" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="codev.html" class="nav__link">codev</a></li>
+                    <li class="nav__item"><a href="tooltips.html" class="nav__link">Contact</a></li>
+
+
+                    <li class="nav__item"><a href="javascript:void(0)" onclick="start()" class="nav__link">🔔</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="l-main">
+        <!--===== HOME =====-->
+        <section class="home" id="home">
+            <div class="home__container bd-grid">
+                <div class="home__img">
+                    <img src="assets/img/img1.png" alt="" data-speed="-2" class="move">
+                    <img src="assets/img/img2.png" alt="" data-speed="2" class="move">
+                    <img src="assets/img/img3.png" alt="" data-speed="2" class="move">
+                    <img src="assets/img/img4.png" alt="" data-speed="-2" class="move">
+                    <img src="assets/img/img5.png" alt="" data-speed="-2" class="move">
+                    <img src="assets/img/img6.png" alt="" data-speed="2" class="move">
+                </div>
+
+                <div class="home__data">
+                    <h1 class="home__title">Start your<br> Journey</h1>
+                    <p class="home__description">Let people around the world teach you <br> CODING</p>
+                    <a href="codev.html" class="home__button">Get course</a>
+
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyA7DnSxJnWQaYFRDxQXAwnrlG-e36OzjUA",
+            authDomain: "getsetcoder.firebaseapp.com",
+            projectId: "getsetcoder",
+            storageBucket: "getsetcoder.appspot.com",
+            messagingSenderId: "1066011616063",
+            appId: "1:1066011616063:web:017987ccc2e6091b99e98a",
+            measurementId: "G-NCR4ZGNKXG"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+    <!--===== GSAP =====-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+
+    <!--===== MAIN JS =====-->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/firebase-messaging-sw.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/push.min.js"></script>
+    <script src="assets/js/serviceWorker.min.js"></script>
+<script>
+    function start(){
+        Push.create("Hello world!", {
+    body: "Nothing to say",
+    icon: 'assets/img/logo.png',
+    timeout: 4000,
+    onClick: function () {
+        window.focus();
+        this.close();
+    }
+})
+
+    }
+</script>
+</body>
+
+</html>
